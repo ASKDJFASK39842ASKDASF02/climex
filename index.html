@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Climex</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
     <div class="app-container">
@@ -23,12 +24,14 @@
                 <p id="weatherDescription" class="description"></p>
                 <p id="humidity" class="details"></p>
             </div>
+            <div id="map" class="map-container"></div> <!-- Contenedor del mapa -->
         </main>
 
         <footer class="app-footer">
             <p>&copy; 2024 Desarrollado con ❤️ por el grupo 1DCMX</p>
         </footer>
     </div>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
