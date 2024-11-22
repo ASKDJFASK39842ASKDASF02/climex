@@ -1,48 +1,121 @@
-/* Modal */
-.modal {
-    display: none; /* Oculto por defecto */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
+/* Configuración base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
-.modal-content {
-    background: white;
-    color: black;
-    padding: 20px;
-    border-radius: 10px;
-    width: 80%;
+body {
+    background: linear-gradient(to bottom, #6db3f2, #1e69c3);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Contenedor principal */
+.app-container {
+    width: 100%;
     max-width: 400px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
 }
 
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 20px;
+/* Header */
+.app-header {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.app-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Menú interactivo */
+.menu {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Contenido principal */
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.weather-display {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.location-name {
     font-size: 1.5rem;
     font-weight: bold;
-    color: black;
-    cursor: pointer;
+    margin-bottom: 10px;
 }
 
-.close-btn:hover {
-    color: red;
-}
-
-/* Mejoras generales */
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0;
-}
-
-ul li {
+.temperature {
+    font-size: 2.5rem;
+    font-weight: bold;
     margin-bottom: 5px;
+}
+
+.description {
+    font-size: 1rem;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.details {
+    font-size: 1rem;
+}
+
+/* Footer */
+.app-footer {
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    font-size: 0.9rem;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
